@@ -159,8 +159,8 @@ export default function CardCanvas() {
     toolMode,
   } = useAppStore();
 
-  const handleStageClick = useCallback(
-    (e: Konva.KonvaEventObject<MouseEvent>) => {
+  const handleStageEvent = useCallback(
+    (e: Konva.KonvaEventObject<MouseEvent | TouchEvent>) => {
       const isBackground = e.target === e.target.getStage() || e.target.name() === 'card-bg';
       if (toolMode === 'stamp' && activeStampId && isBackground) {
         const stage = e.target.getStage()!;
@@ -195,8 +195,8 @@ export default function CardCanvas() {
         <Stage
           width={cardWidth}
           height={cardHeight}
-          onClick={handleStageClick}
-          onTap={handleStageClick}
+          onClick={handleStageEvent}
+          onTap={handleStageEvent}
         >
           <Layer>
             {/* Card background */}

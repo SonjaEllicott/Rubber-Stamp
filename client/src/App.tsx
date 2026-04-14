@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import Toolbar from './components/Toolbar';
 import StampLibrary from './components/StampLibrary';
 import CardCanvas from './components/CardCanvas';

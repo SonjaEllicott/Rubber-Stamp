@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import type { Stamp } from '../types';
 
